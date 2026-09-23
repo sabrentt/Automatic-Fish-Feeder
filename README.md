@@ -75,5 +75,3 @@ rtc.setDateTime(dt);
 
 - Jika LCD tidak menyala/blank, alamat I2C mungkin bukan `0x27` — coba scan alamat I2C dan ganti sesuai hasilnya (umumnya `0x3F`).
 - Jumlah gerakan servo buka pakan bisa disesuaikan lewat variabel `waktuBukaServo`, `servoBuka`, dan `servoTutup` di bagian atas kode.
-
-Bebas digunakan dan dimodifikasi untuk keperluan pembelajaran/non-komersial.
