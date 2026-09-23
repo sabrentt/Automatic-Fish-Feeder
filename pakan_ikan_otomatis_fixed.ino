@@ -9,8 +9,6 @@
 #include <Servo.h>
 #include <EEPROM.h>
 
-// FIX 1: waktuMakan1-6 sekarang variable DateTime beneran (bukan #define),
-// karena nilainya di-overwrite dari EEPROM saat setup().
 DateTime waktuMakan1 = DateTime(0, 1, 1, 10, 52, 0, 0); // jam pagi SET WAKTU MAKAN 1
 DateTime waktuMakan2 = DateTime(0, 1, 1, 10, 53, 0, 0); // jam sore SET WAKTU MAKAN 2
 DateTime waktuMakan3 = DateTime(0, 1, 1, 9, 9, 0, 0);   // SET WAKTU MAKAN 3
@@ -18,8 +16,6 @@ DateTime waktuMakan4 = DateTime(0, 1, 1, 9, 9, 0, 0);   // SET WAKTU MAKAN 4
 DateTime waktuMakan5 = DateTime(0, 1, 1, 9, 9, 0, 0);   // SET WAKTU MAKAN 5
 DateTime waktuMakan6 = DateTime(0, 1, 1, 9, 9, 0, 0);   // SET WAKTU MAKAN 6
 
-// FIX 2: alamat EEPROM sekarang unik per waktu makan (kelipatan sizeof(DateTime)),
-// jadi waktu makan 2-6 gak lagi saling timpa data satu sama lain.
 #define EEPROM_ADDR_WAKTU_MAKAN1 (0 * sizeof(DateTime))
 #define EEPROM_ADDR_WAKTU_MAKAN2 (1 * sizeof(DateTime))
 #define EEPROM_ADDR_WAKTU_MAKAN3 (2 * sizeof(DateTime))
@@ -81,8 +77,6 @@ void setup() {
   waktuMakan5 = loadTimeFromEEPROM(EEPROM_ADDR_WAKTU_MAKAN5);
   waktuMakan6 = loadTimeFromEEPROM(EEPROM_ADDR_WAKTU_MAKAN6);
 
-  // FIX 3: tanda kutip sprintf dibetulin + %02d:%02d ditambahin supaya
-  // jam/menit yang tercetak beneran ambil dari variabel, bukan teks statis.
   sprintf(buf, "Set waktu 1 = %02d:%02d (Senin, Selasa, Rabu, Kamis, Jum'at, Sabtu, Minggu)", waktuMakan1.hour(), waktuMakan1.minute());
   Serial.println(buf);
   sprintf(buf, "Set waktu 2 = %02d:%02d (Senin, Selasa, Rabu, Kamis, Jum'at, Sabtu, Minggu)", waktuMakan2.hour(), waktuMakan2.minute());
