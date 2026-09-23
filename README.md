@@ -2,7 +2,7 @@
 
 Alat pemberi pakan ikan otomatis berbasis Arduino Uno yang membuka penampung pakan secara terjadwal menggunakan RTC (Real Time Clock). Cocok untuk kolam atau akuarium yang perlu diberi makan rutin tanpa harus dilakukan manual setiap hari.
 
-Project ini dibuat untuk dipamerkan pada acara **Pekan IT** semasa SMK.
+Project ini dibuat untuk dipamerkan pada acara **Pekan IT** semasa di SMK Plus Pelita Nusantara
 
 ## Fitur
 
