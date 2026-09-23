@@ -42,11 +42,11 @@ Project ini dibuat untuk dipamerkan pada acara **Pekan IT** semasa di SMK Plus P
 
 ## Instalasi
 
-1. Install Arduino IDE (jika belum ada).
+1. Install Arduino IDE.
 2. Install library berikut lewat **Library Manager**:
    - `LiquidCrystal_I2C`
    - `Sodaq_DS3231`
-   - `Servo` (biasanya sudah bawaan Arduino IDE)
+   - `Servo`
 3. Clone/download repo ini.
 4. Buka file `.ino` di Arduino IDE.
 5. Sambungkan Arduino Uno ke komputer, pilih board dan port yang sesuai.
@@ -75,7 +75,5 @@ rtc.setDateTime(dt);
 
 - Jika LCD tidak menyala/blank, alamat I2C mungkin bukan `0x27` — coba scan alamat I2C dan ganti sesuai hasilnya (umumnya `0x3F`).
 - Jumlah gerakan servo buka pakan bisa disesuaikan lewat variabel `waktuBukaServo`, `servoBuka`, dan `servoTutup` di bagian atas kode.
-
-## Lisensi
 
 Bebas digunakan dan dimodifikasi untuk keperluan pembelajaran/non-komersial.
