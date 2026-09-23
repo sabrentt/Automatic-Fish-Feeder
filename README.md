@@ -82,6 +82,7 @@ Berikut hasil jadi alatnya — enclosure berisi Arduino, RTC, dan LCD I2C yang m
 
 ![Bagian dalam enclosure Arduino](images/alat-1.jpg)
 ![Alat terpasang di akuarium](images/alat-2.jpg)
+![Foto di acara pameran](images/alat-3.jpg)
 
 ## Lisensi
 
