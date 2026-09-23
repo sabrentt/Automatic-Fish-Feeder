@@ -2,7 +2,7 @@
 
 Alat pemberi pakan ikan otomatis berbasis Arduino Uno yang membuka penampung pakan secara terjadwal menggunakan RTC (Real Time Clock). Cocok untuk kolam atau akuarium yang perlu diberi makan rutin tanpa harus dilakukan manual setiap hari.
 
-Project ini dibuat untuk dipamerkan pada acara **Pekan IT** semasa di SMK Plus Pelita Nusantara.
+Project ini dibuat untuk dipamerkan pada acara **Pekan IT** semasa SMK.
 
 ## Fitur
 
@@ -42,11 +42,11 @@ Project ini dibuat untuk dipamerkan pada acara **Pekan IT** semasa di SMK Plus P
 
 ## Instalasi
 
-1. Install Arduino IDE.
+1. Install Arduino IDE (jika belum ada).
 2. Install library berikut lewat **Library Manager**:
    - `LiquidCrystal_I2C`
    - `Sodaq_DS3231`
-   - `Servo`
+   - `Servo` (biasanya sudah bawaan Arduino IDE)
 3. Clone/download repo ini.
 4. Buka file `.ino` di Arduino IDE.
 5. Sambungkan Arduino Uno ke komputer, pilih board dan port yang sesuai.
@@ -75,3 +75,14 @@ rtc.setDateTime(dt);
 
 - Jika LCD tidak menyala/blank, alamat I2C mungkin bukan `0x27` — coba scan alamat I2C dan ganti sesuai hasilnya (umumnya `0x3F`).
 - Jumlah gerakan servo buka pakan bisa disesuaikan lewat variabel `waktuBukaServo`, `servoBuka`, dan `servoTutup` di bagian atas kode.
+
+## Dokumentasi alat
+
+Berikut hasil jadi alatnya — enclosure berisi Arduino, RTC, dan LCD I2C yang menampilkan jam, hari, tanggal, dan suhu secara real-time, terpasang di atas boks pakan dengan servo penggerak pintu pakan:
+
+![Bagian dalam enclosure Arduino](images/alat-1.jpg)
+![Alat terpasang di akuarium](images/alat-2.jpg)
+
+## Lisensi
+
+Bebas digunakan dan dimodifikasi untuk keperluan pembelajaran/non-komersial.
